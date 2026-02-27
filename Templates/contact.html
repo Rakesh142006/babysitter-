@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<!--=================================
+    banner -->
+    <section class="header-inner bg-dark text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 ">
+            <h2 class="inner-banner-title">Contact us</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    banner -->
+
+    <!--=================================
+    map -->
+    <section class="space-ptb">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <div class="form-dark contact-form">
+              <h4>Need assistance? please complete the contact form</h4>
+                 <form class="mt-4" method="post">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="mb-3 col-12">
+                      <input type="text" class="form-control" id="Username" placeholder="Name" name="name">
+                    </div>
+                    <div class="mb-3 col-12">
+                      <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                    </div>
+                    <div class="mb-3 col-12">
+                      <input type="text" class="form-control" id="phone" placeholder="Phone Number" name="mob">
+                    </div>
+                    <div class="col-12 mb-0">
+                      <textarea rows="4" class="form-control" id="sector" placeholder="Message" name="message"></textarea>
+                    </div>
+                    <div class="col-12 mt-4">
+                      <div class="d-grid">
+                        <button type="submit" class="btn btn-primary" href="#">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            {% if session %}
+            <script>
+              alert("{{session}}")
+            </script>
+            {% endif %}
+            {% if email %}
+            <script>
+              alert("{{email}}")
+            </script>
+            {% endif %}
+            
+          </div>
+          <div class="col-md-8">
+            <div class="map">
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d651276.8223302028!2d-112.26948898677708!3d40.713748022764676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f530948459a5%3A0x5ea5d81be1facaf0!2sEnvato%20Usa%2C%20Inc!5e0!3m2!1sen!2sin!4v1573620281166!5m2!1sen!2sin" style="border:0;" allowfullscreen=""></iframe> -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d155342.17104242384!2d72.62171473240012!3d23.006553738595457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1738840479370!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    map -->
+
+    <!--=================================
+    Service -->
+    <section class="space-pb">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12 ">
+            <div class="section-title text-center">
+              <h2 class="title">Let’s get in touch!</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="feature-info text-center">
+              <div class="feature-info-icon">
+                <i class="flaticon-placeholder"></i>
+              </div>
+              <div class="feature-info-content">
+                <h4 class="feature-info-title">Address</h4>
+                <span>1234 North Avenue Luke Lane South Bend, IN 360001</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div class="feature-info text-center">
+              <div class="feature-info-icon">
+                <i class="flaticon-phone"></i>
+              </div>
+              <div class="feature-info-content">
+                <h4 class="feature-info-title">Phone</h4>
+                <span>+0123 456 789</span>
+                <span>+704 279 1249</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-info text-center">
+              <div class="feature-info-icon">
+                <i class="flaticon-envelope"></i>
+              </div>
+              <div class="feature-info-content">
+                <h4 class="feature-info-title">Email</h4>
+                <span>support@sitter.com</span>
+                <span>letstalk@sitter.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Service -->
+
+ <!--=================================
+    Action-box -->
+    <section class="space-pb">
+      <div class="container">
+        <div class="callout">
+          <div class="row align-items-center">
+            <div class="col-xl-8 col-lg-7 col-md-9">
+              <div class="callout-title">
+                <h3>Are you looking for baby sitter just call us!</h3>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+              <img class="img-fluid" src="{% static 'images/action-box-arrow.png' %}" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-3">
+              <div class="callout-botton">
+                <a href="tel:7042791249" class="btn btn-md btn-primary"><i class="fas fa-headset"></i>+(704) 279-1249</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Action-box -->
+{% endblock %}

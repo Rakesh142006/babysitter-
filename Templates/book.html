@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<!--=================================
+    banner -->
+    <section class="header-inner bg-dark text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 ">
+            <h2 class="inner-banner-title">Book a Sitter</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    banner -->
+
+    <!--=================================
+    Login -->
+    <section class="space-ptb login">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-sm-10">
+            <div class="sitter-account">
+              <form class="row g-2 align-items-center" action="/" method="get">
+                <div class="mb-3 select-border col-md-6 ">
+                  <label class="form-label">Choose your care</label>
+                  <select class="form-control basic-select">
+                    <option value="1" selected="selected">Babysitter or Nanny</option>
+                    <option value="2">Babysitter Per Hour</option>
+                    <option value="3">Nanny Placement</option>
+                  </select>
+                </div>
+                <div class="mb-3 select-border col-md-6">
+                  <label class="form-label">Your Location</label>
+                  <select class="form-control basic-select">
+                    <option value="1" selected="selected">please choose</option>
+                    <option value="2">Dunedin</option>
+                    <option value="3">Wanaka</option>
+                    <option value="4">Queenstown</option>
+                  </select>
+                </div>
+                <div class="mb-3 mt-0 col-sm-12">
+                  <label class="form-label"> Babysitting or Nanny Location</label>
+                  <p>Please enter the address for Babysitter or Nanny to attend.</p>
+                  <textarea class="form-control" rows="5" placeholder=""></textarea>
+                </div>
+                <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">First name</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">Last name</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">Mobile number</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="">
+                </div>
+                <div class="mb-3 mt-0 col-md-6 datetimepickers">
+                  <label class="form-label">Required Date</label>
+                  <div class="input-group date" id="datetimepicker-01" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" placeholder="Date" data-target="#datetimepicker-01">
+                    <div class="input-group-append" data-target="#datetimepicker-01" data-toggle="datetimepicker">
+                      <div class="input-group-text h-100 rounded-end"><i class="far fa-calendar-alt"></i></div>
+                    </div>
+                  </div>
+                </div>
+                 <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">How many children require care?</label>
+                  <input type="number" class="form-control" value="5">
+                </div>
+                <div class="mb-3 mt-0 col-md-6 datetimepickers">
+                  <label class="form-label">Start Time</label>
+                  <div class="input-group date" id="datetimepicker-03" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker-03"/>
+                    <div class="input-group-append" data-target="#datetimepicker-03" data-toggle="datetimepicker">
+                      <div class="input-group-text h-100 rounded-end"><i class="far fa-clock"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 mt-0 col-md-6 datetimepickers">
+                  <label class="form-label">End Time</label>
+                  <div class="input-group date" id="datetimepicker-04" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker-04"/>
+                    <div class="input-group-append" data-target="#datetimepicker-04" data-toggle="datetimepicker">
+                      <div class="input-group-text h-100 rounded-end"><i class="far fa-clock"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">Age</label>
+                  <input type="text" class="form-control"  placeholder="e.g.  1yr, and 9Months">
+                </div>
+                <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">Allergies</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">Emergency Contact Name</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="mb-3 mt-0 col-md-6">
+                  <label class="form-label">How did you hear about us?</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="mb-3 mt-0 col-md-12">
+                  <label class="form-label">Anything else we should know?</label>
+                  <textarea class="form-control" rows="5" placeholder=""></textarea>
+                </div>
+
+                <div class="">
+                <div class="section-title">
+                  <h3 class="title">Payment</h3>
+                </div>
+                <div class="checkout-review">
+                  <div class="table-responsive">
+                    <table class="table cart">
+                      <tbody>
+                        <tr>
+                          <th class="border-top-0 product-name" scope="row">Plan</th>
+                          <th class="border-top-0 product-total" scope="row">Subtotal</th>
+                        </tr>
+                        <tr>
+                          <td> Professional </td>
+                          <td> ₹6900 </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                      <tr>
+                        <th class="product-total border-0" scope="row">Total</th>
+                        <td class="product-total amount text-primary border-0"><strong> ₹6900 </strong></td>
+                      </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <div class="accordion accordion-02 mb-3" id="accordion-faq">
+                    <div class="card">
+                      <div class="accordion-icon card-header" id="headingthree">
+                        <h6 class="mb-0">
+                        <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
+                        Cash on delivery
+                        </button>
+                        </h6>
+                      </div>
+                      <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-bs-parent="#accordion-faq">
+                        <div class="card-body">
+                          Pay with cash upon delivery.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="accordion-icon card-header" id="headingfor">
+                        <h6 class="mb-0">
+                        <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefor" aria-expanded="false" aria-controls="collapsefor">
+                        Online
+                        </button>
+                        </h6>
+                      </div>
+                      <div id="collapsefor" class="collapse" aria-labelledby="headingfor" data-bs-parent="#accordion-faq">
+                        <div class="card-body">
+                          Transfer payment Online.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+                  <div class="custom-control custom-checkbox my-4">
+                    <input type="checkbox" class="custom-control-input" id="dateposted1">
+                    <label class="custom-control-label form-label" for="dateposted1"> I have read and agree to the website terms and conditions.</label>
+                  </div>
+                </div>
+                </div>
+
+                <div class="mb-3 mt-0 col-md-12">
+                  <p class="mb-3">We will attempt to fill this booking, but in some cases, such as peak times and short time frame bookings, we may not succeed in doing so, and your booking payment will be refunded.</p>
+                </div>
+
+                  <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">Book Now</button>
+                  </div>
+
+             </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Login -->
+{% endblock %}
